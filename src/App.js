@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { ThemeProvider } from 'styled-components'
+
+import WeatherWatchContainer from './containers/WeatherWatchContainer';
+
 import './App.css';
+
+const theme = {
+  primary: '#6699CC;'
+};
+// <ThemeProvider theme={theme}>
+//   <div className="app">
+//   </div>
+// </ThemeProvider>
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <div className="app-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="app-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <WeatherWatchContainer>
+        OMG ITS THE WEATHER
+      </WeatherWatchContainer>
     );
   }
 }
