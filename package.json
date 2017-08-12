@@ -14,8 +14,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "drydeploy": "npm run build && aws s3 sync build/ s3://stevensarcinella.com --dryrun",
+    "deploy": "npm run build && aws s3 sync build/ s3://stevensarcinella.com",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://www.stevensarcinella.com"
+  "homepage": "http://stevensarcinella.com"
 }
